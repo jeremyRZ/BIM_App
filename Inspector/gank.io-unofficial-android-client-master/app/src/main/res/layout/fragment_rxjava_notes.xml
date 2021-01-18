@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.hotbitmapgg.gank.widget.SpringScrollView
+        android:id="@+id/sping_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.hotbitmapgg.gank.widget.ItemArrowCardView
+                android:id="@+id/btn_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:name="mcxiaoke/RxDocs" />
+
+
+            <com.hotbitmapgg.gank.widget.ItemArrowCardView
+                android:id="@+id/btn_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:name="GeniusVJR/LearningNotes" />
+
+            <include layout="@layout/layout_line_view" />
+
+            <com.hotbitmapgg.gank.widget.ItemArrowCardView
+                android:id="@+id/btn_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:name="Gityuan/Blog" />
+
+            <include layout="@layout/layout_line_view" />
+
+            <com.hotbitmapgg.gank.widget.ItemArrowCardView
+                android:id="@+id/btn_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:name="JackyAndroid/AndroidInterview-Q-A" />
+
+
+            <com.hotbitmapgg.gank.widget.ItemArrowCardView
+                android:id="@+id/btn_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:name="GcsSloop/AndroidNote" />
+
+
+            <include layout="@layout/layout_line_view" />
+
+
+            <com.hotbitmapgg.gank.widget.ItemArrowCardView
+                android:id="@+id/btn_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:name="Idtk/Blog" />
+
+            <com.hotbitmapgg.gank.widget.ItemArrowCardView
+                android:id="@+id/btn_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:name="安卓开发艺术探索读书笔记" />
+
+            <include layout="@layout/layout_line_view" />
+
+            <com.hotbitmapgg.gank.widget.ItemArrowCardView
+                android:id="@+id/btn_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:name="EffectiveJava读书笔记" />
+
+
+        </LinearLayout>
+
+
+    </com.hotbitmapgg.gank.widget.SpringScrollView>
+
+</LinearLayout>
