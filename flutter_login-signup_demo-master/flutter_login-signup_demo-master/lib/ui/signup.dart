@@ -157,7 +157,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return CustomTextField(
       keyboardType: TextInputType.text,
       icon: Icons.person,
-      hint: "First Name",
+      hint: "姓名",
     );
   }
 
@@ -165,7 +165,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return CustomTextField(
       keyboardType: TextInputType.text,
       icon: Icons.person,
-      hint: "Last Name",
+      hint: "职位",
     );
   }
 
@@ -173,7 +173,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return CustomTextField(
       keyboardType: TextInputType.emailAddress,
       icon: Icons.email,
-      hint: "Email ID",
+      hint: "手机号码",
     );
   }
 
@@ -181,7 +181,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return CustomTextField(
       keyboardType: TextInputType.number,
       icon: Icons.phone,
-      hint: "Mobile Number",
+      hint: "验证码",
     );
   }
 
@@ -190,7 +190,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
       keyboardType: TextInputType.text,
       obscureText: true,
       icon: Icons.lock,
-      hint: "Password",
+      hint: "密码",
+    );
+  }
+
+  Widget passwordTextFormField2() {
+    return CustomTextField(
+      keyboardType: TextInputType.text,
+      obscureText: true,
+      icon: Icons.lock,
+      hint: "再次输入密码",
     );
   }
 
