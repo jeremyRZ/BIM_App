@@ -7,6 +7,9 @@ Blockchain and i-Core-enabled Multi-stakeholder Building Information Modelling P
 
 ##  Project Apps
 * [Inspector](https://github.com/JJJeremy108/BIM_App/tree/master/flutter_login-signup_demo-master/flutter_login-signup_demo-master)
+- [ ] Name
+    - [ ] e-inspection star
+    - [ ] e-in star
 - [x] [UI Design](https://modao.cc/app/4a060c5cb04fd125e11c47b1dad83bb973e32845?simulator_type=device&sticky)
 - [x] Sign in
 - [ ] Sign up
