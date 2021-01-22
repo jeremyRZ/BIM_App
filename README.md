@@ -6,7 +6,7 @@ Blockchain and i-Core-enabled Multi-stakeholder Building Information Modelling P
 ![Pandao editor.md](https://ilab.hku.hk/content/uploads/2020/11/ilab.jpg "iLab")
 
 ##  Project Apps
-* Inspector
+* [Inspector](https://github.com/JJJeremy108/BIM_App/tree/master/flutter_login-signup_demo-master/flutter_login-signup_demo-master)
 - [x] UI Design
 - [x] Sign in
 - [ ] Sign up
