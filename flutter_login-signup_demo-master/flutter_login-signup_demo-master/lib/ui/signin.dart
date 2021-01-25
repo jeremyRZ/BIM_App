@@ -74,7 +74,7 @@ class _SignInScreenState extends State<SignInScreen> {
               height:_large? _height/4 : (_medium? _height/3.75 : _height/3.5),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [ Color(0xff348F50), Color(0xff56B4D3)],
+                  colors: [Colors.orange[200], Colors.pinkAccent],
                 ),
               ),
             ),
@@ -88,7 +88,7 @@ class _SignInScreenState extends State<SignInScreen> {
               height: _large? _height/4.5 : (_medium? _height/4.25 : _height/4),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [ Color(0xff808080),Color(0xff008080)],
+                  colors: [Colors.orange[200], Colors.pinkAccent],
                 ),
               ),
             ),
@@ -200,7 +200,7 @@ class _SignInScreenState extends State<SignInScreen> {
             child: Text(
               "找回",
               style: TextStyle(
-                  fontWeight: FontWeight.w600, color: Colors.green[400]),
+                  fontWeight: FontWeight.w600, color: Colors.orange[200]),
             ),
           )
         ],
@@ -227,7 +227,7 @@ class _SignInScreenState extends State<SignInScreen> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(20.0)),
           gradient: LinearGradient(
-            colors: <Color>[Color(0xff348F50), Color(0xff56B4D3)],
+            colors: <Color>[Colors.orange[200], Colors.pinkAccent],
           ),
         ),
         padding: const EdgeInsets.all(12.0),
@@ -257,7 +257,7 @@ class _SignInScreenState extends State<SignInScreen> {
             child: Text(
               "注册",
               style: TextStyle(
-                  fontWeight: FontWeight.w800, color: Colors.green[400], fontSize: _large? 19: (_medium? 17: 15)),
+                  fontWeight: FontWeight.w800, color: Colors.orange[200], fontSize: _large? 19: (_medium? 17: 15)),
             ),
           )
         ],

@@ -147,6 +147,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
             phoneTextFormField(),
             SizedBox(height: _height / 60.0),
             passwordTextFormField(),
+            SizedBox(height: _height / 60.0),
+            passwordTextFormField2(),
           ],
         ),
       ),
@@ -164,7 +166,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget lastNameTextFormField() {
     return CustomTextField(
       keyboardType: TextInputType.text,
-      icon: Icons.person,
+      icon: Icons.supervised_user_circle,
       hint: "职位",
     );
   }
@@ -172,7 +174,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget emailTextFormField() {
     return CustomTextField(
       keyboardType: TextInputType.emailAddress,
-      icon: Icons.email,
+      icon: Icons.phone,
       hint: "手机号码",
     );
   }
@@ -180,7 +182,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget phoneTextFormField() {
     return CustomTextField(
       keyboardType: TextInputType.number,
-      icon: Icons.phone,
+      icon: Icons.verified_rounded,
       hint: "验证码",
     );
   }
@@ -198,7 +200,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return CustomTextField(
       keyboardType: TextInputType.text,
       obscureText: true,
-      icon: Icons.lock,
+      icon: Icons.security,
       hint: "再次输入密码",
     );
   }
@@ -218,7 +220,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 });
               }),
           Text(
-            "I accept all terms and conditions",
+            "我接受所有条款和条件",
             style: TextStyle(fontWeight: FontWeight.w400, fontSize: _large? 12: (_medium? 11: 10)),
           ),
         ],
@@ -246,7 +248,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ),
         ),
         padding: const EdgeInsets.all(12.0),
-        child: Text('SIGN UP', style: TextStyle(fontSize: _large? 14: (_medium? 12: 10)),),
+        child: Text('注册', style: TextStyle(fontSize: _large? 14: (_medium? 12: 10)),),
       ),
     );
   }
@@ -258,7 +260,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            "Or create using social media",
+            "关联社交媒体创建账号",
             style: TextStyle(fontWeight: FontWeight.w400, fontSize: _large? 12: (_medium? 11: 10)),
           ),
         ],
@@ -314,7 +316,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               print("Routing to Sign up screen");
             },
             child: Text(
-              "Sign in",
+              "注册",
               style: TextStyle(
                   fontWeight: FontWeight.w800, color: Colors.orange[200], fontSize: 19),
             ),
