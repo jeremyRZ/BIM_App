@@ -15,6 +15,10 @@ Blockchain and i-Core-enabled Multi-stakeholder Building Information Modelling P
     - [ ] Report
     - [ ] 2D Model
 * NFC
+### Refersence
+* [Flutter Book](https://github.com/CarGuo/gsy_flutter_book)
+* [Flutter 实战](https://book.flutterchina.club/chapter2/flutter_router.html)
+* [wanandroid.com](https://www.wanandroid.com/projectindex)
 
 ##  Project Website
 * [Metronic](https://keenthemes.com/metronic/ "Metronic")
