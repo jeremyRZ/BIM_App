@@ -7,9 +7,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: 'Flutter Demo',
+      initialRoute:"homepage", //名为"/"的路由作为应用的home(首页)
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
+      routes:{
+        "new_page":(context) => NewRoute(),
+        "homepage":(context) => MyHomePage(title: 'Flutter Demo Home Page'), //注册首页路由
+        
+      } ,
       home: new MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -68,10 +74,11 @@ class _MyHomePageState extends State<MyHomePage> {
               textColor: Colors.blue,
               onPressed: () {
                 //导航到新路由
-                Navigator.push( context,
-                    MaterialPageRoute(builder: (context) {
-                      return NewRoute();
-                    }));
+                Navigator.pushNamed(context, "new_page");
+                // Navigator.push( context,
+                //     MaterialPageRoute(builder: (context) {
+                //       return NewRoute();
+                //     }));
               },
             ),
             FlatButton(
