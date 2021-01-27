@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:english_words/english_words.dart';
 
 void main() => runApp(new MyApp());
 
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
       routes:{
         "new_page":(context) => NewRoute(),
         "homepage":(context) => MyHomePage(title: 'Flutter Demo Home Page'), //注册首页路由
-        
+        "countpage":(context) => CounterWidget(),
+
       } ,
       home: new MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -92,6 +94,18 @@ class _MyHomePageState extends State<MyHomePage> {
                     }));
               },
             ),
+            FlatButton(
+              child: Text("open new to count"),
+              textColor: Colors.blue,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push( context,
+                    MaterialPageRoute(builder: (context) {
+                      return CounterWidget();
+                    }));
+              },
+            ),
+            RandomWordsWidget(),
           ],
         ),
       ),
@@ -157,6 +171,132 @@ class RouterTestRoute extends StatelessWidget {
           print("路由返回值: $result");
         },
         child: Text("打开提示页"),
+      ),
+    );
+  }
+}
+
+class RandomWordsWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // 生成随机字符串
+    final wordPair = new WordPair.random();
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: new Text(wordPair.toString()),
+    );
+  }
+}
+
+class CounterWidget extends StatefulWidget {
+  const CounterWidget({
+    Key key,
+    this.initValue: 0
+  });
+
+  final int initValue;
+
+  @override
+  _CounterWidgetState createState() => new _CounterWidgetState();
+}
+
+class _CounterWidgetState extends State<CounterWidget> {
+  int _counter;
+
+  @override
+  void initState() {
+    super.initState();
+    //初始化状态
+    _counter=widget.initValue;
+    print("initState");
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    print("build");
+    return Scaffold(
+      body: Center(
+        child: FlatButton(
+          child: Text('$_counter'),
+          //点击后计数器自增
+          onPressed:()=>setState(()=> ++_counter,
+          ),
+        ),
+      ),
+    );
+  }
+
+  @override
+  void didUpdateWidget(CounterWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    print("didUpdateWidget");
+  }
+
+  @override
+  void deactivate() {
+    super.deactivate();
+    print("deactive");
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    print("dispose");
+  }
+
+  @override
+  void reassemble() {
+    super.reassemble();
+    print("reassemble");
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    print("didChangeDependencies");
+  }
+
+}
+Widget build(BuildContext context) {
+//  return CounterWidget();
+  return Text("xxx");
+}
+
+// TapboxA 管理自身状态.
+
+//------------------------- TapboxA ----------------------------------
+
+class TapboxA extends StatefulWidget {
+  TapboxA({Key key}) : super(key: key);
+
+  @override
+  _TapboxAState createState() => new _TapboxAState();
+}
+
+class _TapboxAState extends State<TapboxA> {
+  bool _active = false;
+
+  void _handleTap() {
+    setState(() {
+      _active = !_active;
+    });
+  }
+
+  Widget build(BuildContext context) {
+    return new GestureDetector(
+      onTap: _handleTap,
+      child: new Container(
+        child: new Center(
+          child: new Text(
+            _active ? 'Active' : 'Inactive',
+            style: new TextStyle(fontSize: 32.0, color: Colors.white),
+          ),
+        ),
+        width: 200.0,
+        height: 200.0,
+        decoration: new BoxDecoration(
+          color: _active ? Colors.lightGreen[700] : Colors.grey[600],
+        ),
       ),
     );
   }
