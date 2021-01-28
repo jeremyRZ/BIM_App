@@ -21,6 +21,7 @@ Blockchain and i-Core-enabled Multi-stakeholder Building Information Modelling P
 * [wanandroid.com](https://www.wanandroid.com/projectindex)
 
 ##  Project Website
+* [Introduction webpage](https://blockchainbim.hku.hk/)
 * [Metronic](https://keenthemes.com/metronic/ "Metronic")
 
 ##  Project Web Server
